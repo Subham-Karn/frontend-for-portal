@@ -7,6 +7,7 @@ import { useAuth } from '../hooks/useHook'
 import SearchInput from '../util/SearchInput'
 import LoginMondal from '../components/LoginMondal'
 import SignupModal from '../components/SignupModal'
+import UserMenu from './UserMenu'
 const Navbar = () => {
     const [trackIndex , setTrackIndex] = useState('Home');
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
     const {isSignupModalOpen, setIsSignupModalOpen} = useAuth();
     const {user , handleLogout} = useAuth();
     const localUser = JSON.parse(localStorage.getItem('user'));
-    
+    const currentUser = user?.data || localUser || null;
     const naviagte = useNavigate();
   return (
     <header className={`bg-[#1800ad] text-white flex justify-between items-center px-4 py-2`}>
@@ -56,7 +57,7 @@ const Navbar = () => {
         </div>
             <div className='hidden md:flex'>
                 {
-                    user || localUser?(
+                    currentUser?(
                     user?.data.isAuthenticated || localUser?.isAuthenticated && (
                         <div onClick={() => setIsUserOpen(!isUserOpen)}  className={`flex rounded-full shadow-lg cursor-pointer ${user?.data.image === null ? 'bg-gray-300 p-4' : ''} items-center`}>
                             {
@@ -132,8 +133,8 @@ const Navbar = () => {
                 </div>
             ))}
             {
-                user? (
-                    <User size={20}/>
+                currentUser ? (
+                   <UserMenu user={currentUser} handleLogout={handleLogout} setIsOpen={setIsOpen} />
                 ):(
                     <div className='flex gap-4 items-center'>
                         <Button onClick={() => setIsLoginModalOpen(true)} className={'bg-white text-[#1800ad] hover:bg-white/60 cursor-pointer transition-all duration-150 py-2 px-4 rounded-full'}>Login</Button>
