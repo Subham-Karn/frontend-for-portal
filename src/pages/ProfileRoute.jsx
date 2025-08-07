@@ -80,7 +80,7 @@ const ProfileRoute = () => {
   return (
     <main className='grid grid-cols-1 md:grid-cols-3 gap-6 p-5 max-w-6xl mx-auto'>
       {/* Profile Section */}
-      <section className='bg-white rounded-xl shadow-sm p-6 h-fit sticky top-4'>
+      <section className='bg-white z-30 rounded-xl shadow-sm p-6 h-fit sticky top-4'>
         <div className='flex flex-col items-center gap-6'>
           {/* Profile Image */}
           <div className='relative'>

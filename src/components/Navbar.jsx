@@ -117,7 +117,7 @@ const Navbar = () => {
        </nav>
        {
           isOpen && (
-            <nav className='absolute top-0 left-0 w-full justify-center h-screen bg-[#1800ad] flex flex-col gap-4 items-center'>
+            <nav className='absolute top-0 left-0 w-full z-60 justify-center h-screen bg-[#1800ad] flex flex-col gap-4 items-center'>
             <Button onClick={() => setIsOpen(!isOpen)}  className={'absolute top-4 right-4 hover:text-white/60'}><X size={30}/></Button>
             {navItems.map((item) => (
                 <div
