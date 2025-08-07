@@ -63,7 +63,7 @@ const Navbar = () => {
                                 user?.data?.image || localUser?.image === null ? (
                                     <User className='text-gray-500' size={25}/>
                                 ):(
-                                <img className='w-15 h-15 rounded-full object-cover ring-2 ring-white' src={`http://localhost:3000/uploads/${localUser?.image}`} alt="" /> 
+                                <img className='w-15 h-15 rounded-full object-cover ring-2 ring-white' src={`https://portal-server-v1.onrender.com/uploads/${localUser?.image}`} alt="" /> 
                                 )
                             }
                         </div>

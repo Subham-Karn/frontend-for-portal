@@ -11,7 +11,7 @@ const HomeRoute = () => {
 
   const currentUser = user?.data || localUser || null;
   const avatar = currentUser?.image
-    ? `http://localhost:3000/uploads/${currentUser.image}`
+    ? `https://portal-server-v1.onrender.com/uploads/${currentUser.image}`
     : null;
 
   return (

@@ -63,7 +63,7 @@ const PublicPostComponent = () => {
   const getImageSrc = (image) => {
     if (!image) return null;
     if (image.startsWith('http')) return image;
-    return `http://localhost:3000/uploads/${image}`;
+    return `https://portal-server-v1.onrender.com/uploads/${image}`;
   };
 
   if (!feedPosts || feedPosts.length === 0) {

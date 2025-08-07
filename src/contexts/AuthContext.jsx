@@ -2,7 +2,7 @@ import axios from "axios";
 import { createContext, useState } from "react";
 
 const AuthContext = createContext();
-const BASE_URL = "http://localhost:3000/api/auth";
+const BASE_URL = "https://portal-server-v1.onrender.com/api/auth";
 const AuthContextProvider = ({ children }) => {
     // const [allUser , setAllUser] = useState([]);
     const [user , setUser] = useState(null);

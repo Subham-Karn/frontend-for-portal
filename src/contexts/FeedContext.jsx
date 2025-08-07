@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 
-const BASE_URL = 'http://localhost:3000/api/feed';
+const BASE_URL = 'https://portal-server-v1.onrender.com/api/feed';
 const FeedContext  =  createContext();
 
 const FeedContextProvider =  ({children}) => {

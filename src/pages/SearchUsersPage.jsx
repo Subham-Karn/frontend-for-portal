@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const BASE_URL = 'http://localhost:5000/api'; // Update as needed
+const BASE_URL = 'https://portal-server-v1.onrender.com/api'; // Update as needed
 
 const SearchPage = () => {
   const [query, setQuery] = useState('');

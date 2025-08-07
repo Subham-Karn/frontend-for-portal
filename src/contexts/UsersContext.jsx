@@ -3,7 +3,7 @@ import { createContext , useState} from "react";
 
 
 const UserContext = createContext();
-const BASE_URL = "http://localhost:3000/api/users";
+const BASE_URL = "https://portal-server-v1.onrender.com/api/users";
 const UsersContextProvider = ({children}) => {
     const [sucess , setSucess] = useState('');
     const [error , setError] = useState('');
