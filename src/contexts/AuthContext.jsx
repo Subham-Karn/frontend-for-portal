@@ -4,7 +4,6 @@ import { createContext, useState } from "react";
 const AuthContext = createContext();
 const BASE_URL = "https://portal-server-v1.onrender.com/api/auth";
 const AuthContextProvider = ({ children }) => {
-    // const [allUser , setAllUser] = useState([]);
     const [user , setUser] = useState(null);
     const [isLoading , setIsLoading] = useState(false);
     const [error , setError] = useState(null);
