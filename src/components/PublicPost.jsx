@@ -3,6 +3,7 @@ import { MessageCircle, Share2, MoreHorizontal, Loader2 } from 'lucide-react';
 import { FaHeart, FaRegHeart, FaRegComment } from 'react-icons/fa';
 import { formatDistanceToNow } from 'date-fns';
 import { useFeed } from '../hooks/useHook';
+import { Link } from 'react-router-dom';
 
 const PublicPostComponent = () => {
   const { 
@@ -94,11 +95,13 @@ const PublicPostComponent = () => {
             {/* Post Header */}
             <div className="flex items-center justify-between p-4">
               <div className="flex items-center space-x-3">
+                <Link to={`/profile/${user.username}`} >
                 <img
                   src={getImageSrc(user.image)}
                   alt={user.name}
                   className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
                 />
+                </Link>
                 <div>
                   <h3 className="font-semibold text-gray-900">
                     {user.name || 'User'}
